@@ -7,7 +7,7 @@ export default function ContactCard(props) {
 
   return (
     <div className="contact-card">
-      <img src="https://via.placeholder.com/150" alt="profile"/>
+      <img src={props.avatar} alt="profile"/>
       <div className="user-details">
         <p>Name: {props.name}</p>
         <p>Email: {props.email}</p>
