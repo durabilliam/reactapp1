@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles.css"
 
-export default function ContactCard() {
+export default function ContactCard(props) {
+  const [showAge, setShowAge] = useState(false);
+  const ageToggle = <button onClick = {() => setShowAge(!showAge)}>Toggle Age</button>
+
   return (
     <div className="contact-card">
       <img src="https://via.placeholder.com/150" alt="profile"/>
       <div className="user-details">
-        <p>Name: Adrian Mole</p>
-        <p>Email: Molepeople@bandwagon.com</p>
-        <p>Age:</p>
+        <p>Name: {props.name}</p>
+        <p>Email: {props.email}</p>
+        {ageToggle}
+        {showAge && <p>Age: {props.age}</p>}
       </div>
     </div>
   )
