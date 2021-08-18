@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import ContactCard from "./components/contactCard";
 
-function App() {
+const App = () => {
+  const message = "No way LOL!!!!";
+  const handleClick = () => {
+    alert("You clicked!!!!");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContactCard/>
   );
-}
+
+};
 
 export default App;
